@@ -143,7 +143,15 @@ def kill_previous_process():
 
 def play_song(url):
     """Play the song using mpv without blocking the script."""
-    process = subprocess.Popen([PLAYER, url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    system = os.name
+
+    if system == "nt":
+        process = subprocess.Popen([PLAYER, url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    elif system == "posix":
+        process = subprocess.Popen(["mpv", url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    else:
+        print(f"Unknown system: {system}")
+  
     process_dict['mpv_process'] = process
     print(f"Song is now playing (PID: {process.pid})...")
 
