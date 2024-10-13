@@ -2,7 +2,7 @@
 
 [![Author](https://img.shields.io/badge/Author-Robotics%20(R)-blue.svg)](https://github.com/robotic-s)
 [![Version](https://img.shields.io/badge/Version-1.0.0.1.1-brightgreen.svg)](https://github.com/Direct-Play/releases)
-![Direct Play Sangeet Radio](https://github.com/your-username/your-repository/blob/main/path-to-image.png)
+![Direct Play Sangeet Radio](https://github.com/robotic-s/Direct-Play/blob/main/sangeet%20radio)
 ## Project Overview
 
 DirectPlay is a Python-based YouTube Music streaming player that allows users to search for, stream, and display song lyrics in a terminal interface. The project leverages `ytmusicapi` and `yt-dlp` to stream audio directly from YouTube Music and fetch song metadata, including lyrics when available. It also integrates `mpv` for smooth playback and provides a simple command-line interface for playback management.
