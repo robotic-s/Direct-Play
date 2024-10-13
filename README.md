@@ -41,7 +41,15 @@ DirectPlay is a Python-based YouTube Music streaming player that allows users to
    sudo apt update && sudo apt upgrade -y 
    sudo apt install mpv
    ```
-6. Run the player:
+6. If yt-dlp is installed through pip or pipx, you can install the plugin with the following:
+
+pip:
+
+python3 -m pip install -U https://github.com/coletdjnz/yt-dlp-youtube-oauth2/archive/refs/heads/master.zip
+pipx:
+
+pipx inject yt-dlp https://github.com/coletdjnz/yt-dlp-youtube-oauth2/archive/refs/heads/master.zip
+7. Run the player:
    ```
    python directplay.py
    ```
