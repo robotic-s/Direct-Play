@@ -87,6 +87,12 @@ def get_audio_url(video_id):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         result = ydl.extract_info(video_url, download=False)
         if 'url' in result:
+            if "itag=774" in result['url']:
+                print("Got the premium stream!")
+            elif "itag=251" in result['url']:
+                print("Got regular stream")
+            else:
+                print("Playing the best available stream")
             return result['url']
     return None
 
