@@ -52,6 +52,9 @@ python3 -m pip install -U https://github.com/coletdjnz/yt-dlp-youtube-oauth2/arc
 pipx:
 
 pipx inject yt-dlp https://github.com/coletdjnz/yt-dlp-youtube-oauth2/archive/refs/heads/master.zip
+
+
+
 7. Run the player:
    ```
    python directplay.py
