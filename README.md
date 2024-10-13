@@ -31,7 +31,7 @@ DirectPlay is a Python-based YouTube Music streaming player that allows users to
    ```
    pkg install mpv
    ```
-4. If Issue in temrux try updating it:
+4. If Issue in termux try updating it:
    ```
    pkg update
    pkg upgrade
