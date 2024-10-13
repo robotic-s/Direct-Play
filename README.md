@@ -18,13 +18,13 @@ DirectPlay is a Python-based YouTube Music streaming player that allows users to
 
 1. Clone the repository to your local machine:
    ```
-   git clone https://github.com/your-username/directplay.git
+   git clone https://github.com/robotic-s/Direct-Play.git
    cd directplay
    ```
 
 2. Install the necessary dependencies:
    ```
-   pip install -r requirements.txt
+   pip install -r package
    ```
 
 3. Run the player:
