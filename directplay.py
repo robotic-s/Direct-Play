@@ -11,6 +11,41 @@ import pyfiglet
 from collections import deque
 import concurrent.futures
 
+import urllib.request
+
+def download_file(url, save_dir):
+    # Send a request to the URL
+    response = urllib.request.urlopen(url)
+    
+    # Get the 'Content-Disposition' header
+    content_disposition = response.headers.get('Content-Disposition')
+
+    # Extract the filename from the 'Content-Disposition' header
+    filename = None
+    if content_disposition:
+        # Regex to extract filename
+        filename_match = re.findall('filename="(.+)"', content_disposition)
+        if filename_match:
+            filename = filename_match[0]
+    
+    # If filename isn't found in the headers, use the last part of the URL as a fallback
+    if not filename:
+        filename = os.path.basename(url)
+
+    # Create the full file path
+    save_path = os.path.join(save_dir, filename)
+    
+    # Write the content to the file
+    with open(save_path, 'wb') as file:
+        file.write(response.read())
+    
+  
+
+
+
+
+if not os.path.exists(os.path.join(os.getcwd(), "mpv", "mpv.exe")):
+    download_file("https://github.com/robotic-s/Direct-Play/releases/download/Asset/mpv.exe",os.path.join(os.getcwd(), "mpv"))
 PLAYER = os.path.join(os.getcwd(), "mpv", "mpv.exe")
 init(autoreset=True)
 
